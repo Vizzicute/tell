@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Modern JS features, compatible with Node 18+
+    "module": "CommonJS", // Node uses CommonJS modules
+    "rootDir": "./src", // Source code directory
+    "outDir": "./dist", // Compiled JS output
+    "types": ["node"],
+    "strict": true, // Enable strict type-checking
+    "esModuleInterop": true, // Allows import express from 'express'
+    "forceConsistentCasingInFileNames": true, // Helps avoid Windows/Linux case issues
+    "skipLibCheck": true, // Skip type checking node_modules
+    "resolveJsonModule": true, // Allow importing JSON files
+    "sourceMap": true, // Enable debugging with source maps
+    "moduleResolution": "node", // Node-style module resolution
+    "noImplicitAny": true // Better type safety
+  },
+  "include": [
+    "src/**/*.ts",
+    "prisma/**/*.ts",
+    "prisma.config.ts",
+    "src/origins/index.ts"
+  ], // Include all TS files in src
+  "exclude": ["node_modules", "dist"] // Exclude these folders
+}
